@@ -7,98 +7,139 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f9;
     }
 
-    header {
-      background-color: #4a90e2;
-      color: white;
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #6c63ff;
+      padding: 10px 20px;
+    }
+
+    .logo-container {
       display: flex;
       align-items: center;
-      padding: 10px 15px;
     }
 
     .logo {
       height: 40px;
+      width: auto;
     }
 
-    .site-title {
-      margin-left: 10px;
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    nav {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      padding: 10px;
-      background-color: #4a90e2;
-    }
-
-    nav a {
-      text-align: center;
+    .site-name {
       color: white;
-      text-decoration: none;
-      margin: 5px 0;
-      padding: 10px;
-      background-color: #357ABD;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-
-    .hero {
-      padding: 30px 15px;
-      text-align: center;
-      background-color: #e3f2fd;
-    }
-
-    .hero h1 {
       font-size: 24px;
+      font-weight: bold;
+      margin-left: 12px;
     }
 
-    .hero p {
-      font-size: 15px;
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .discord-button {
-      background-color: #7289da;
-      color: white;
-      padding: 10px 20px;
+    .nav-button {
+      padding: 8px 16px;
+      background-color: #ffffff;
+      color: #6c63ff;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
-      font-size: 15px;
+      font-weight: 500;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav-button:hover {
+      background-color: #574fd6;
+      color: #ffffff;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    @media screen and (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-button {
+        width: 100%;
+        text-align: left;
+      }
+
+      .site-name {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo" class="logo">
-    <div class="site-title">CollabCloud</div>
-  </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Features</a>
-    <a href="https://discord.gg/MEMMyRQJA9">Join</a>
-    <a href="#">About</a>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo" class="logo">
+      <span class="site-name">CollabCloud</span>
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="nav-button">Home</a>
+      <a href="#features" class="nav-button">Features</a>
+      <a href="https://discord.gg/MEMMyRQJA9" target="_blank" class="nav-button">Discord</a>
+      <a href="#about" class="nav-button">About</a>
+      <a href="https://www.reddit.com/r/IBO/" target="_blank" class="nav-button">Reddit</a>
+    </div>
   </nav>
 
-  <div class="hero">
-    <h1>Welcome to CollabCloud</h1>
-    <p>An unofficial platform for everything related to the International Baccalaureate.</p>
-    <a href="https://discord.gg/MEMMyRQJA9" class="discord-button">Join Our Discord</a>
+  <!-- CONTENT -->
+  <div class="section" id="home">
+    <h2>Welcome to CollabCloud</h2>
+    <p>CollabCloud is an unofficial website for everything concerning the International Baccalaureate. It aims to help students and educators collaborate better in virtual classrooms and online communities.</p>
   </div>
+
+  <div class="section" id="features">
+    <h2>Features</h2>
+    <p>
+      ✔ Connect with IB learners across the globe<br>
+      ✔ Join Discord communities for support and discussion<br>
+      ✔ Stay updated with resources, tips, and IB-related news
+    </p>
+  </div>
+
+  <div class="section" id="about">
+    <h2>About</h2>
+    <p>
+      Virtual classrooms have made it easier for students from different parts of the globe to learn together.
+      They provide access to all kinds of study material that many students can’t access due to several reasons.
+      Even with all kinds of advantages, virtual classrooms also have disadvantages such as a lack of physical
+      interaction and communication challenges. CollabCloud helps overcome those issues through better-designed
+      online tools and community features.
+    </p>
+  </div>
+
 </body>
 </html>
-
-
-
-
-
-
-
